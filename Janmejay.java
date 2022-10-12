@@ -5,8 +5,8 @@ class Janmejay extends Frame implements ActionListener {
 
 Label l1, l2, l3, l4, l5, l6, l7, l8, l9, l10;
 TextField t2, t3, t4, t5, t6, t7, t9, t10;
-Choice c8;
-Button b;
+Choice ch;
+Button b,b2;
 
 Janmejay() {
 
@@ -68,31 +68,31 @@ add(t7);
 l8=new Label("City : ");
 l8.setBounds(500,310,50,25);
 add(l8);
-c8=new Choice();
-c8.setBounds(600,310,200,25);
-add(c8);
-c8.add("--Not Selected--");
-c8.add("Agra");c8.add("Ahmedabad");
-c8.add("Amritsar");c8.add("Banglore");
-c8.add("Bareilly");c8.add("Bhuvaneshwar");
-c8.add("Chandigarh");c8.add("Chennai");
-c8.add("Cochin");c8.add("Dehradun");
-c8.add("Ghaziabad");c8.add("Gorakhpur");
-c8.add("Gwalior");c8.add("Hyderabad");
-c8.add("Indore");c8.add("Jaipur");
-c8.add("Kolkata");c8.add("Lucknow");
-c8.add("Mangalore");c8.add("Mathura");
-c8.add("Meerut");c8.add("Mumbai");
-c8.add("New Delhi");c8.add("Patna");
-c8.add("Pune");c8.add("Raibareli");
-c8.add("Surat");
+ch=new Choice();
+ch.setBounds(600,310,200,25);
+add(ch);
+ch.add("--Not Selected--");
+ch.add("Kanpur");ch.add("Ahmedabad");
+ch.add("Lucknow");ch.add("Sultanpur");
+ch.add("Ghaziabad");ch.add("Delhi");
+ch.add("Itawa");ch.add("Banaras");
+// c8.add("Cochin");c8.add("Dehradun");
+// c8.add("Ghaziabad");c8.add("Gorakhpur");
+// c8.add("Gwalior");c8.add("Hyderabad");
+// c8.add("Indore");c8.add("Jaipur");
+// c8.add("Kolkata");c8.add("Lucknow");
+// c8.add("Mangalore");c8.add("Mathura");
+// c8.add("Meerut");c8.add("Mumbai");
+// c8.add("New Delhi");c8.add("Patna");
+// c8.add("Pune");c8.add("Raibareli");
+// c8.add("Surat");
 
-l9=new Label("Username : ");
-l9.setBounds(500,345,65,25);
-add(l9);
-t9=new TextField();
-t9.setBounds(600,345,200,25);
-add(t9);
+// l9=new Label("Username : ");
+// l9.setBounds(500,345,65,25);
+// add(l9);
+// t9=new TextField();
+// t9.setBounds(600,345,200,25);
+// add(t9);
 
 l10=new Label("Password : ");
 l10.setBounds(500,380,60,25);
@@ -125,7 +125,7 @@ new Janmejay();
 }
 
 class NJS extends Frame implements ActionListener {
-TextField t;
+Button b2;
 NJS() {
 
 addWindowListener(new WindowAdapter() {
@@ -136,8 +136,8 @@ System.exit(0);}
 setSize(800,500);
 setTitle("Window 2");
 setLayout(new FlowLayout());
-t=new TextField();
-add(t);
+b2=new Button("Successfully submitted");
+add(b2);
 setVisible(true);
 
 }
@@ -145,7 +145,7 @@ setVisible(true);
 public void actionPerformed(ActionEvent e) {
 
 NJS f=new NJS();
-f.t.setText("Successfully submitted");
+f.b2.setBounds(630,425,100,50);
 
 }
 }
